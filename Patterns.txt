@@ -1,0 +1,53 @@
+# --- CLOUD PROVIDERS & ORCHESTRATION ---
+AWS Access Key: (A3T[A-Z0-9]|AKIA|AGPA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}
+AWS Secret Key: (?i)aws(.{0,20})?['"][0-9a-zA-Z\/+]{40}['"]
+AWS MWS Auth Token: amzn\.mws\.[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}
+Google Cloud Key: AIza[0-9A-Za-z\\-_]{35}
+Google OAuth Client Secret: (?i)client_secret(.{0,20})?['"][a-zA-Z0-9-_]{24}['"]
+Azure Tenant ID: (?i)tenant_id(.{0,20})?['"][a-f0-9]{8}-([a-f0-9]{4}-){3}[a-f0-9]{12}['"]
+DigitalOcean Token: dop_v1_[a-f0-9]{64}
+Heroku API Key: (?i)heroku(.{0,20})?['"][0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}['"]
+Kubernetes Config: (?i)apiVersion:\sv1|kind:\sConfig|current-context:
+
+# --- DATABASES & CACHE ---
+MongoDB Connection: mongodb(\+srv)?:\/\/[a-zA-Z0-9._%+-]+:[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}
+MySQL/Postgres: (mysql|postgresql|postgres|db|database):\/\/[a-z0-9]+:[a-z0-9]+@[a-z0-9.-]+(:[0-9]+)?\/[a-z0-9_-]+
+Redis Auth: redis:\/\/(.*?)@([a-z0-9.-]+):([0-9]+)
+Elasticsearch Secret: (?i)elastic_password\s*[:=]\s*['"][^'"]+['"]
+Firebase DB URL: [a-z0-9.-]+\.firebaseio\.com
+CouchDB URL: (https?:\/\/)?([a-z0-9]+:[a-z0-9]+@)?[a-z0-9.-]+:5984
+
+# --- COMMUNICATION & NOTIFICATION ---
+Slack Bot/User: xox[baprs]-[0-9]{10,13}-[0-9]{10,13}-[a-zA-Z0-9]{24}
+Slack Webhook: https:\/\/hooks.slack.com\/services\/T[A-Z0-9]{8,11}\/B[A-Z0-9]{8,11}\/[A-Za-z0-9]{24}
+Discord Webhook: https:\/\/discord(app)?\.com\/api\/webhooks\/[0-9]{18}\/[a-zA-Z0-9\-_]{68}
+Twilio SID: AC[a-f0-9]{32}
+Twilio Auth Token: (?i)twilio(.{0,20})?['"][a-f0-9]{32}['"]
+SendGrid API: SG\.[a-zA-Z0-9\-_]{22}\.[a-zA-Z0-9\-_]{43}
+Mailgun Key: key-[a-f0-9]{32}
+Telegram Bot Token: [0-9]{9,10}:[a-zA-Z0-9_-]{35}
+
+# --- E-COMMERCE & PAYMENT GATEWAYS ---
+Stripe Secret Key: sk_live_[0-9a-zA-Z]{24}
+Stripe Restricted: rk_live_[0-9a-zA-Z]{24}
+PayPal Braintree: (?i)braintree(.{0,20})?['"][a-z0-9]{20,40}['"]
+Shopify Access: shpat_[a-fA-F0-9]{32}
+Square Access: sq0atp-[0-9A-Za-z\-_]{22}
+Razorpay Key: rzp_(live|test)_[a-zA-Z0-9]{14}
+
+# --- AUTHENTICATION & TOKENS ---
+JWT Token: eyJ[A-Za-z0-9-_=]+\.eyJ[A-Za-z0-9-_=]+\.?[A-Za-z0-9-_.+/=]*
+Bearer Token: Authorization:\sBearer\s[A-Za-z0-9\-._~+/]+=*
+Auth0 Secret: (?i)auth0(.{0,20})?['"][a-zA-Z0-9\-_]{64}['"]
+Okta Token: (?i)okta(.{0,20})?['"][a-zA-Z0-9\-_]{42}['"]
+GitHub Token: (ghp|gho|ghu|ghs|ghr)_[a-zA-Z0-9]{36}
+GitLab Token: glpat-[a-zA-Z0-9\-]{20}
+
+# --- SENSITIVE PATHS & CONFIGS ---
+S3 Bucket: [a-z0-9.-]+\.s3([.-][a-z0-9.-]+)?\.amazonaws\.com
+Internal IP: 10\.\d{1,3}\.\d{1,3}\.\d{1,3}|172\.(1[6-9]|2[0-9]|3[0-1])\.\d{1,3}\.\d{1,3}|192\.168\.\d{1,3}\.\d{1,3}
+Environment File: (\.env|\.git\/config|docker-compose\.yml|web\.config|settings\.json)
+Hardcoded Credentials: (?i)(user|username|pass|password|pwd|admin_user|admin_pass|root_password)\s*[:=]\s*['"][^'"]+['"]
+Email Exposure: [a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}
+Private Key: -----BEGIN (RSA|OPENSSH|DSA|EC|PGP)? PRIVATE KEY-----
+
